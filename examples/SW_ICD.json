@@ -1,0 +1,115 @@
+{
+	"sw_icd": {
+		"uplink_data_stream": {
+			"uplink_data_stream_name": "Description uplink_data_stream",
+			"tc": [
+				{
+					"tc_name": "Standby",
+					"tc_description": [
+						"Description standby telecommand",
+						"Description_2 standby telecommand",
+						"Description_3 standby telecommand"
+					],
+					"field": [
+						{
+							"field_name": "Name Standby field_1",
+							"field_description": "Description Standby field_1",
+							"field_value": "field_1 value",
+							"field_type": "unsigned char",
+							"field_min": "field_1 min value",
+							"field_max": "field_1 max value"
+						},
+						{
+							"field_name": "Name Standby field_2",
+							"field_description": "Description Standby field_2",
+							"field_value": "field_2 value",
+							"field_type": "char",
+							"field_min": "field_2 min value",
+							"field_max": "field_2 max value"
+						},
+						{
+							"field_name": "Name Standby field_3",
+							"field_description": "Description Standby field_3",
+							"field_value": "field_3 value",
+							"field_type": "unsigned long",
+							"field_min": "field_3 min value",
+							"field_max": "field_3 max value"
+						},
+						{
+							"field_name": "Name Standby field_4",
+							"field_description": "Description Standby field_4",
+							"field_value": "field_4 value",
+							"field_type": "unsigned long long",
+							"field_min": "field_4 min value",
+							"field_max": "field_4 max value"
+						},
+						{
+							"field_name": "Name Standby field_5",
+							"field_description": "Description Standby field_5",
+							"field_value": "field_5 value",
+							"field_type": "signed char",
+							"field_min": "field_5 min value",
+							"field_max": "field_5 max value"
+						}
+					]
+				},
+				{
+					"tc_name": "Frame TC",
+					"tc_description": "Description Frame TC",
+					"field": [
+						{
+							"field_name": "Name Frame TC field_1",
+							"field_description": "Description Frame TC field_1",
+							"field_value": "field_1 value",
+							"field_type": "char",
+							"field_min": "field_1 min value",
+							"field_max": "field_1 max value"
+						},
+						{
+							"field_name": "Name Frame TC field_2",
+							"field_description": "Description Frame TC field_2",
+							"field_value": "field_2 value",
+							"field_type": "char",
+							"field_min": "field_2 min value",
+							"field_max": "field_2 max value"
+						},
+						{
+							"field_name": "Name Frame TC field_3",
+							"field_description": "Description Frame TC field_3",
+							"field_value": "field_3 value",
+							"field_type": "char",
+							"field_min": "field_3 min value",
+							"field_max": "field_3 max value"
+						},
+						{
+							"field_name": "Name Frame TC field_4",
+							"field_description": "Description Frame TC field_4",
+							"field_value": "field_4 value",
+							"field_type": "char",
+							"field_min": "field_4 min value",
+							"field_max": "field_4 max value"
+						},
+						{
+							"field_name": "Name Frame TC field_5",
+							"field_description": "Description Frame TC field_5",
+							"field_value": "field_5 value",
+							"field_type": "char",
+							"field_min": "field_5 min value",
+							"field_max": "field_5 max value"
+						}
+					]
+				}
+			]
+		},
+		"downlink_data_stream": {
+			"tm": {
+				"name": "Housekeeping",
+				"description": "System status reports",
+				"field": {
+					"field_name": "global_status",
+					"field_type": "char"
+				}
+			}
+		}
+	}
+}
