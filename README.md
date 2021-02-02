@@ -2,6 +2,10 @@
 <h1 align="center">GRANITE - GeneRic softwAre iNterface RequIrement gEnerator</h1>
 
 ***
+
+<p align="center">
+<a href="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/overview/main"><img src="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/badge/main" alt="CodeFactor" /></a>
+</p>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-386/">
     <img src=
