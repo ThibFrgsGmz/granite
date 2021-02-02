@@ -5,6 +5,7 @@
 
 <p align="center">
 <a href="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/overview/main"><img src="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/badge/main" alt="CodeFactor" /></a>
+<a href="https://www.codacy.com/gh/ThibFrgsGmz/granite/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ThibFrgsGmz/granite&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1240f67d2d0443b2adc4dd7ed49f6361"/></a>
 </p>
 
 <p align="center">
