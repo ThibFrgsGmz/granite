@@ -6,6 +6,11 @@
 <p align="center">
 <a href="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/overview/main"><img src="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/badge/main" alt="CodeFactor" /></a>
 </p>
+
+<p align="center">
+<a href="https://deepsource.io/gh/ThibFrgsGmz/granite/?ref=repository-badge" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/ThibFrgsGmz/granite.svg/?label=active+issues&show_trend=true"/></a>
+<a href="https://deepsource.io/gh/ThibFrgsGmz/granite/?ref=repository-badge" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/ThibFrgsGmz/granite.svg/?label=resolved+issues&show_trend=true"/></a>
+</p>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-386/">
     <img src=
