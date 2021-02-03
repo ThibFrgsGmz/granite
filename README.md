@@ -6,6 +6,9 @@
 <p align="center">
 <a href="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/overview/main"><img src="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/badge/main" alt="CodeFactor" /></a>
 <a href="https://www.codacy.com/gh/ThibFrgsGmz/granite/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ThibFrgsGmz/granite&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1240f67d2d0443b2adc4dd7ed49f6361"/></a>
+<a href="https://frontend.code-inspector.com/project/18606/dashboard"><img src="https://www.code-inspector.com/project/18606/status/svg" alt="CodeInspector" /></a>
+<a href="https://frontend.code-inspector.com/project/18606/dashboard"><img src="https://www.code-inspector.com/project/18606/score/svg" alt="CodeInspector" /></a>
+</p>
 
 
 <p align="center">
@@ -54,10 +57,6 @@
 </p>
 
 <p align="center">
-  <!-- <a href="https://forthebadge.com">
-    <img src=
-    "https://forthebadge.com/images/badges/made-with-python.svg" alt="BuildWithLove" />
-  </a> -->
   <a href=
   "https://forthebadge.com">
     <img src=
@@ -66,8 +65,9 @@
 </p>
 
 
-<p align= "center"> GRANITE is an End-to-End Development Toolkit for Software Interface Document Scraping, 
-It allows developers to abstractly describe an ICD in XML format and to output interface documentation in Markdown as well as C source code in order to bring embedded software developers and test facilities developers into phase. </p>
+<p align= "center"> GRANITE is a tool for generating an interface requirements document, along with the associated source code, from an abstract description of interfaces. These interface requirements are written in Markdown, the associated source code is in C language, and the abstract description is in XML language. 
+This process makes it possible to put in phase at the level of the interfaces two softwares, an embedded software and an EGSE for example.
+This avoids misunderstandings or software implementations that differ from the requirement document, whether by suppliers, systems integrators or the test facilities team. </p>
 
 
 # Visual Studio Code Setup
