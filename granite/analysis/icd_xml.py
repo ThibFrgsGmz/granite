@@ -1,22 +1,18 @@
 # External includes
-import os
-from string import Template
-from typing import TypeVar
 # Import the Beautiful Soup library to scrape information from XML files
 import bs4 as bs
 import markdown_generator as mg
 
 # Internal includes
-from granite.generator.c_struct import CStructureGenerator
 from granite.generator.c_wrapper import CFileWrapper
 from granite.generator.md_wrapper import MarkDownFileWrapper
 
-HEADER_TABLE_MD = { "Name"          : mg.Alignment.CENTER      , 
-                    "Description"   : mg.Alignment.LEFT        , 
-                    "Value"         : mg.Alignment.CENTER      , 
-                    "Type"          : mg.Alignment.CENTER      , 
-                    "Min"           : mg.Alignment.CENTER      , 
-                    "Max"           : mg.Alignment.CENTER      } 
+HEADER_TABLE_MD = { "Name":         mg.Alignment.CENTER, 
+                    "Description":  mg.Alignment.LEFT, 
+                    "Value":        mg.Alignment.CENTER, 
+                    "Type":         mg.Alignment.CENTER, 
+                    "Min":          mg.Alignment.CENTER, 
+                    "Max":          mg.Alignment.CENTER} 
 
 class IcdXmlAnalysis():
     """
@@ -110,14 +106,13 @@ class IcdXmlAnalysis():
         self, 
         tc_fields: bs.element.ResultSet,
         members: list
-    ) -> None :
+    ) -> None:
         """
         Method for parsing a telecommand
 
         :param telecommand: Input telecommand object
         """
 
-        # print("xxxxx", type(members))
         # Instantiate a dictionary to retrieve all field of the telecommand
         dict_field = {}
 
@@ -135,7 +130,7 @@ class IcdXmlAnalysis():
         field: bs.element.Tag,
         members: list,
         dict_field: dict
-    ) -> None :
+    ) -> None:
         """
         Method for parsing a telecommand field
 

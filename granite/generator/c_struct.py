@@ -27,7 +27,7 @@ class CStructureGenerator():
     def set_struct_name(self, struct_name: str ) -> None:
         self.c_struct['structname'] = struct_name
 
-    def set_struct_members( self, struct_members : List[str]) -> None:
+    def set_struct_members( self, struct_members: List[str]) -> None:
         self.c_struct['members'] = struct_members
 
     def spec_to_struct(self) -> str:

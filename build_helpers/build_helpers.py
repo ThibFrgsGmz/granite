@@ -136,7 +136,7 @@ def run_antlr(cmd: Command) -> None:
             msg = f"| Unable to generate parsers: {e} |"
             msg = "=" * len(msg) + "\n" + msg + "\n" + "=" * len(msg)
             cmd.announce(f"{msg}", level=distutils.log.FATAL)
-            exit(1)
+            sys.exit()
         else:
             raise
 

@@ -1,8 +1,4 @@
 # Standard includes
-# OS module provides functions for interacting with the operating system
-import os
-from pathlib import Path
-import tempfile
 from typing import Optional
 # Proejct includes
 from granite.generator.c_struct import CStructureGenerator
@@ -73,6 +69,8 @@ class CFileWrapper(OutputFileWrapper):
         self.struct_members     =   []
 
         self.output_struct = CStructureGenerator()
+
+        self.c_struc = self.output_struct.spec_to_struct()
         
     def __del__(self) -> None:
         
@@ -92,7 +90,6 @@ class CFileWrapper(OutputFileWrapper):
         self.output_struct.set_struct_members(members)
         
     def write_structure(self) -> None:
-        self.c_struc = self.output_struct.spec_to_struct()
         self.write_content(self.c_struc)
         
 

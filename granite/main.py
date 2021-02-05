@@ -21,8 +21,6 @@ python -m granite+.__main__
 #                                                        
 #
 # Standard includes
-# Import the time library to add delays
-import time
 import os
 import argparse
 import logging
@@ -39,7 +37,7 @@ except ImportError as err:
 
 def run():
     # Retrieve the absolute path of the file
-    BASE = os.path.abspath(os.path.dirname(__file__))
+    # BASE = os.path.abspath(os.path.dirname(__file__))
 
     #  Configure the logging system
     logging.basicConfig(format = "[%(process)s:%(threadName)s](%(asctime)s) %(levelname)s - %(name)s - [%(filename)s:%(lineno)d] - %(message)s", level=logging.INFO)
@@ -61,15 +59,16 @@ def run():
         config_info = yaml.safe_load(config)
     if not config_info:
         raise Exception('Invalid configuration file')
-    else:
-        # for item in config_info.values():
-        for item in tqdm(config_info.values()):
-            # Generate the package delivery
-            generator = DeliverableGenerator(item)
+        
+    # for item in config_info.values():
+    for item in tqdm(config_info.values()):
+        # Generate the package delivery
+        DeliverableGenerator(item)
 
 # Encapsulate the main function in a conditional structure
 # This makes it possible to import the file as a module and not to run the main() command.
 if __name__ == "__main__":
+
 
     run()
 
