@@ -17,18 +17,18 @@ _DEFAULT_PROLOG_H_FILE="""/***
 """
 DEFAULT_FILE_LOCATION = "default_file"
 
-_DEFAULT_START_INCLUDE_GUARD_H_FILE="""#ifndef     _INC_HEADER_FILE_DEFAULT
+_DEFAULT_START_INCLUDE_GUARD_H_FILE = """#ifndef     _INC_HEADER_FILE_DEFAULT
 #   define  _INC_HEADER_FILE_DEFAULT
 """
-_DEFAULT_END_INCLUDE_GUARD_H_FILE="""#endif /* _INC_HEADER_FILE_DEFAULT */
+_DEFAULT_END_INCLUDE_GUARD_H_FILE = """#endif /* _INC_HEADER_FILE_DEFAULT */
 """
 
-_START_EXTERN_C_GUARD_H_FILE="""#   ifdef   __cplusplus
+_START_EXTERN_C_GUARD_H_FILE = """#   ifdef   __cplusplus
         extern "C" 
         {
 #   endif
 """
-_END_EXTERN_C_GUARD_H_FILE="""
+_END_EXTERN_C_GUARD_H_FILE = """
 #   ifdef   __cplusplus
         }
 #   endif

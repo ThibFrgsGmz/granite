@@ -32,7 +32,7 @@ class DeliverableGenerator():
         self.logger.name = __name__
         self.logger.debug("Filename in constructor is {}".format(filename))
 
-        filename="C:\\Users\\FARGES\\Documents\\TMP"
+        filename = "C:\\Users\\FARGES\\Documents\\TMP"
         self.filename = Path(filename).resolve()
         if self.filename.is_dir():
             self.filename.mkdir(exist_ok=True)
