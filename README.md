@@ -1,6 +1,7 @@
 ***
 <h1 align="center">GRANITE - GeneRic softwAre iNterface requIremenTs gEnerator</h1>
 
+
 <p align="center">
 <a href="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/overview/main"><img src="https://www.codefactor.io/repository/github/thibfrgsgmz/granite/badge/main" alt="CodeFactor" /></a>
 <a href="https://www.codacy.com/gh/ThibFrgsGmz/granite/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ThibFrgsGmz/granite&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1240f67d2d0443b2adc4dd7ed49f6361"/></a>
@@ -60,7 +61,6 @@
 This process makes it possible to put in phase at the level of the interfaces two softwares, an embedded software and an EGSE for example.
 This avoids misunderstandings or software implementations that differ from the requirement document, whether by suppliers, systems integrators or the test facilities team. </p>
 
----
 
 ## Quick Install 🚀 
 
