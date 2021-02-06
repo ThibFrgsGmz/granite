@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "c:\\Users\\FARGES\\Documents\\VS_Code\\granite_test\\.venv\\Scripts\\python.exe",
+    "python.pythonPath": "c:\\Users\\FARGES\\Documents\\GitHub\\granite\\.venv\\Scripts\\python.exe",
     "python.formatting.provider": "black"
 }
