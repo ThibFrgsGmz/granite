@@ -9,7 +9,7 @@ PROJECT_A: &project-a
   # YES =>  output generated in a directory whose name is a date
   # NO  =>  otherwise
   TIME_INCREMENTAL_OUTPUT_DIR       : NO
-  INPUT_DIR                         : ".\\examples"
+  INPUT_DIR                         : ".\\examples\\input"
   INPUT_XML_ICD_FILE                : SW-ICD.xml
   NAME_OUTPUT_FILE                  : SW-ICD
   OUTPUT_MD                         : NO
