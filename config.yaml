@@ -3,18 +3,9 @@ PROJECT_A: &project-a
   PROJECT_NAME                      : PROJECT_A
   SW_VERSION                        : "0.0.0"
   OUTPUT_DIR                        : ".\\examples\\output"
-  # OUTPUT_DIR                        : "C:\\Users\\FARGES\\Documents\\TEST"
-
-  # Key allowing to choose if we want an output directory corresponding to the execution made at time T
-  # YES =>  output generated in a directory whose name is a date
-  # NO  =>  otherwise
-  TIME_INCREMENTAL_OUTPUT_DIR       : NO
   INPUT_DIR                         : ".\\examples\\input"
-  INPUT_XML_ICD_FILE                : SW-ICD.xml
-  NAME_OUTPUT_FILE                  : SW-ICD
-  OUTPUT_MD                         : NO
-  OUTPUT_RST                        : YES
-  OUTPUT_H_ICD_FILE                 : YES
+  INPUT_XML_ICD_FILE                : SW_ICD.xml
+  NAME_OUTPUT_FILE                  : SW_ICD
   # When using the yaml folded style, the indentation of each line will be ignored. 
   # A line break will be inserted at the end.
   OUTPUT_HEADER_PROLOG               : >-
