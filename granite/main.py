@@ -6,9 +6,7 @@
 
 """
 =========================================================
-Entrypoint for  granite
-To run service, set CONFIG_LOCATION environmental variable and run
-python -m granite+.__main__
+Entrypoint for granite
 =========================================================
 """
 
@@ -21,55 +19,55 @@ python -m granite+.__main__
 #                                                        
 #
 # Standard includes
-import os
 import argparse
 import logging
 import yaml
 # Import the tqdm library for a smart progress meter  for loops
 from tqdm import tqdm
 # Project includes
-# Import all function from the functions module
-try:
-    # import analysis.functions as func
-    from granite.deliverable import DeliverableGenerator
-except ImportError as err:
-    print('ImportError :', err)
+from granite.deliverable import DeliverableGenerator
 
-def run():
-    # Retrieve the absolute path of the file
-    # BASE = os.path.abspath(os.path.dirname(__file__))
+def run() -> None:
 
     #  Configure the logging system
     logging.basicConfig(format = "[%(process)s:%(threadName)s](%(asctime)s) %(levelname)s - %(name)s - [%(filename)s:%(lineno)d] - %(message)s", level=logging.INFO)
 
-    parser = argparse.ArgumentParser(description="Template")
+    # Configure the command line analysis module
+    # parser = argparse.ArgumentParser(description="Template")
+    parser = argparse.ArgumentParser()
 
-    help_msg = "Configuration file in yaml, default to 'config.yaml'"
+    # Add command line argument to retrieve the operator configuration file
+    parser.add_argument('-c', '--config-file', help = "Configuration file in yaml, default to 'config.yaml'")
 
-    parser.add_argument('-c', '--config-file', help=help_msg)
-    help_msg = "output directory, default to '.'"
-    parser.add_argument('-o', '--output-dir', help=help_msg)
-
+    # Parse command line arguments
     args = parser.parse_args()
 
-    # Define the configuration file
+    # Retrieve the configuration file. If no configuration file is specified, use the default one.
     config_file = args.config_file or "config.yaml"
 
+    # Open the configuration file
     with open(config_file) as config:
+
+        # Load the information of the projects defined in the configuration file
         config_info = yaml.safe_load(config)
+
+    # If no configuration file is put in the stream (not even the default one is present)
     if not config_info:
+        # Raise an exception
         raise Exception('Invalid configuration file')
         
-    # for item in config_info.values():
-    for item in tqdm(config_info.values()):
+    # For each project in the configuration file:
+    # Note: a tqdm progress bar is added to allow the operator to be informed of 
+    # the progress of the project processing
+    for project in tqdm(config_info.values()):
         # Generate the package delivery
-        DeliverableGenerator(item)
+        DeliverableGenerator(project)
 
 # Encapsulate the main function in a conditional structure
 # This makes it possible to import the file as a module and not to run the main() command.
 if __name__ == "__main__":
 
-
+    # Run granite application !
     run()
 
 
