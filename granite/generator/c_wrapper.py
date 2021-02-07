@@ -36,8 +36,8 @@ _END_EXTERN_C_GUARD_H_FILE = """
 
 
 class CFileWrapper(OutputFileWrapper):
-    """
-    ...
+    """C File wrapper object
+    
     """
 
     def __init__(
@@ -45,8 +45,14 @@ class CFileWrapper(OutputFileWrapper):
         prolog: Optional[str] = None,
         filename: Optional[str] = None
     ) -> None:
-        """
-        Initialize the object instance
+        """Initialize the object instance
+        
+        Parameters
+        ----------
+        prolog:
+            Prolog to write into the C source file
+        filename:
+            Name of the C source file
         """
         # Call the parent class constructor
         super().__init__(filename, ".h")
@@ -71,9 +77,15 @@ class CFileWrapper(OutputFileWrapper):
         self.output_struct = CStructureGenerator()
 
     def __del__(self) -> None:
+        """
+        Redefine the class destructor to call its parent's destructor
+
+        """
         
+        # Write the end of guard for the C language of the header file.
         self.document.write(_END_EXTERN_C_GUARD_H_FILE)
         
+        # Write the end of guard of the header file
         self.document.write(_DEFAULT_END_INCLUDE_GUARD_H_FILE)
 
         super().__del__()
@@ -84,16 +96,49 @@ class CFileWrapper(OutputFileWrapper):
         name: str,
         members: list
     ) -> None:
+        """Set the members of the C structure.
+
+        Parameters
+        ----------
+        name:
+            Name of the structure
+        members:
+            Members of the structure
+        """
         self.output_struct.set_struct_name(name)
         self.output_struct.set_struct_members(members)
         
     def write_structure(self) -> None:
+        """Write the C structure into the C source file
+
+        """
         
+        # Get the C structure into string
         self.c_struc = self.output_struct.spec_to_struct()
+        
+        # Write teh structure into the file
         self.write_content(self.c_struc)
 
     def write_content(self, string: str) -> None:
+        """Write the specified string into the C source file.
+
+        Parameters
+        ----------
+        string:
+            String to write into the file
+        """
+
+        # Write the string into the file
         self.document.write(string)
 
     def get_c_structure(self) -> str:
+        """Get the C structure.
+
+        Returns
+        ----------
+        str:
+            The C structure
+        """
+
+        # Return the C structure 
         return self.c_struc

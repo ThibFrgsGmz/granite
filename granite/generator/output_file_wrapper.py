@@ -9,12 +9,18 @@ DEFAULT_FILE_LOCATION = "default_file"
 
 class OutputFileWrapper():
     """
-    ...
+    Class to gather the operations common to the output files of the application.
     """
 
-    def __init__(self, filename=None, format = None ):
-        """
-        Initialize the object instance
+    def __init__(self, filename = None, format = None ):
+        """Initialize the object instance
+
+        Parameters
+        ----------
+        filename:
+            Name of the file
+        format:
+            Format of the file
         """
 
         if not filename:

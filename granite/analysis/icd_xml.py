@@ -24,8 +24,15 @@ class IcdXmlAnalysis():
         xml_to_scrape: str,
         output_dir: str,
     ) -> None:
-        """
-        Method for initializing the object instance
+        """Method for initializing the object instance
+
+        Parameters
+        ----------
+        xml_to_scrape:
+            Input file to analyze
+        output_dir:
+            the output directory path
+
         """
 
         # Open the ICD to analyze
@@ -54,10 +61,12 @@ class IcdXmlAnalysis():
         self,
         telecommand: bs.element.Tag
     ) -> None:
-        """
-        Method for parsing a telecommand
+        """Method for parsing a telecommand
 
-        :param telecommand: Input telecommand object
+        Parameters
+        ----------
+        telecommand:
+            Input telecommand object
         """
 
         # Find the telecommand name
@@ -111,10 +120,16 @@ class IcdXmlAnalysis():
         members: list,
         md_table
     ) -> None:
-        """
-        Method for parsing a telecommand
+        """Method for parsing a telecommand
 
-        :param telecommand: Input telecommand object
+        Parameters
+        ----------
+        tc_fields: 
+            All telecommand fields in a BeautifulSoup set
+        members:
+            List of all the members of the fields to be filled by the function
+        md_table:
+            MD table objet to fill for the MD file output
         """
 
         # Instantiate a dictionary to retrieve all field of the telecommand
@@ -135,12 +150,16 @@ class IcdXmlAnalysis():
         members: list,
         dict_field: dict
     ) -> None:
-        """
-        Method for parsing a telecommand field
+        """Method for parsing a telecommand field
 
-        :param field: Input telecommand field
-        :param members: members telecommand field
-        :param dict_field: Output dictionary to retrieve all field characteristics
+        Parameters
+        ----------
+        field: 
+            Input telecommand field
+        members: 
+            List of all the members of the fields to be filled by the function
+        dict_field: 
+            Output dictionary to find the characteristics of all fields
         """
         # Find the telecommand name
         dict_field["field_name"] = self._get_tag_content( field, 'field_name')
@@ -174,11 +193,20 @@ class IcdXmlAnalysis():
         tag: bs.element.Tag,
         name: str
     ) -> str:
-        """
-        Method for getting the text of the first tag name of the upper tag.
+        """Method for getting the text of the first tag name of the upper tag.
 
-        :param tag: Upper Tag
-        :param name: name of the lower tag
+        Parameters
+        ----------
+        tag:
+            Upper BeatufifulSoup Tag
+        name:
+            Name of the lower tag
+            
+        Returns
+        -------
+        str 
+            The text of the tag
+
         """
 
         # Find all the "name" in the tag

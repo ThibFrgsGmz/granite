@@ -28,6 +28,9 @@ from tqdm import tqdm
 from granite.deliverable import DeliverableGenerator
 
 def run() -> None:
+    """Run the granite application
+
+    """
 
     #  Configure the logging system
     logging.basicConfig(format = "[%(process)s:%(threadName)s](%(asctime)s) %(levelname)s - %(name)s - [%(filename)s:%(lineno)d] - %(message)s", level=logging.INFO)

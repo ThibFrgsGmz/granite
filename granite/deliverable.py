@@ -14,8 +14,8 @@ from pathlib import Path
 from granite.analysis.icd_xml import IcdXmlAnalysis
 
 class DeliverableGenerator():
-    """
-    Generate the package
+    """Generate the package
+    
     """
 
     def __init__(
@@ -23,27 +23,18 @@ class DeliverableGenerator():
         project_config: dict,
         logger: Optional[str] = None,
         filename = None,
-    ):
-        """
-        Initialize the object instance
+    ) -> None:
+        """Initialize the object instance
         
-        :param project_config: configuration of the project item
-        :param logger: logger
-        :param filename: not used
+        Parameters
+        ----------
+        project_config: 
+            configuration of the project item
+        logger: 
+            logger (not used yet)
+        filename: 
+            not used yet
         """
-        
-        # self.logger = logger or logging.getLogger()
-        # self.logger.name = __name__
-        # self.logger.debug("Filename in constructor is {}".format(filename))
-
-        # filename = "C:\\Users\\FARGES\\Documents\\TMP"
-        # self.filename = Path(filename).resolve()
-        # if self.filename.is_dir():
-        #     self.filename.mkdir(exist_ok=True)
-        #     self.logger.debug(
-        #         "Given path is directory without filename, using default filename."
-        #     )
-        #     self.filename.joinpath("C:\\Users\\FARGES\\Documents\\TMP", ".md")
 
         # Initialize the instance configuration
         self._config            = project_config
@@ -53,18 +44,25 @@ class DeliverableGenerator():
         # Make output directory
         self._make_output_dir()
 
+        # Retrieve the absolute path of the input ICD
         input_icd = Path(self._config['INPUT_DIR'], self._config['INPUT_XML_ICD_FILE'] ).resolve()
 
+        # Retrieve the absolute path of the output directory
         output_dir = Path(self._config['OUTPUT_DIR'], self.output_folder_tree).resolve()
 
         # Make the output directory
         # os.makedirs(output_dir, exist_ok= True)
 
+        #Analyze the SW-ICD in XML format
         IcdXmlAnalysis(input_icd, output_dir)
 
     def _get_output_path(self) -> str:
-        """
-        Retrieve the output path
+        """Retrieve the output path
+
+        Returns
+        -------
+        str:
+            The output folder path
         """
 
         # Construct a tree structure of output folders based on the information entered by the operator
@@ -74,17 +72,14 @@ class DeliverableGenerator():
             output_folder_tree = _default_deliv_config["OUTPUT_DIR"]
             print("TypeError in {}: {}".format(__name__, err))
 
-        # Return the output folder
+        # Return the output folder path
         return output_folder_tree
 
     def _make_output_dir(self):
+        """Make the output directory
+
         """
-        Make the output directory
-        """
-        # Log informational to the operator
-        # logging.info('Creating the output directory...')
-        # logging.warning('Creating the output directory...')
-        
+
         try:
             # Retrieve the output directory path
             self.folder = self._config['OUTPUT_DIR']
