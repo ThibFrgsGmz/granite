@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<sw_icd>
+	<uplink_data_stream>
+		<uplink_data_stream_name>Description uplink_data_stream</uplink_data_stream_name>
+		<tc>
+			<tc_name>ToF Region Command</tc_name>
+			<tc_tag_name>ToFRegion</tc_tag_name>
+			<tc_description>Description of the ToFRegion command.</tc_description>
+			<field>
+				<field_name>enable</field_name>
+				<field_tag_name>enable</field_tag_name>
+				<field_description>Description enable field.</field_description>
+				<field_value>-</field_value>
+				<field_type>unsigned char</field_type>
+				<field_min>0</field_min>
+				<field_max>1</field_max>
+			</field>
+			<field>
+				<field_name>PlanarRegion</field_name>
+				<field_tag_name>region</field_tag_name>
+				<field_description>Description PlanarRegion field.</field_description>
+				<field_value>-</field_value>
+				<field_type>unsigned char</field_type>
+				<field_min>0</field_min>
+				<field_max>1</field_max>
+			</field>
+		</tc>
+		<tc>
+			<tc_name>ToF Range Command</tc_name>
+			<tc_tag_name>ToFRange</tc_tag_name>
+			<tc_description>Description of the ToFRange command.</tc_description>
+			<field>
+				<field_name>Minimal Depth</field_name>
+				<field_tag_name>min_depth</field_tag_name>
+				<field_description>Description of Minimal Depth field.</field_description>
+				<field_value>-</field_value>
+				<field_type>float</field_type>
+				<field_min>min</field_min>
+				<field_max>max</field_max>
+			</field>
+			<field>
+				<field_name>Maximal Depth</field_name>
+				<field_tag_name>max_depth</field_tag_name>
+				<field_description>Description of Maximal Depth field.</field_description>
+				<field_value>-</field_value>
+				<field_type>float</field_type>
+				<field_min>min</field_min>
+				<field_max>max</field_max>
+			</field>
+		</tc>
+		<tc>
+			<tc_name>ToF Configuration Command</tc_name>
+			<tc_tag_name>ToFConfiguration</tc_tag_name>
+			<tc_description>Description of the ToFConfiguration command.</tc_description>
+			<field>
+				<field_name>Region Enabled</field_name>
+				<field_tag_name>region_enabled</field_tag_name>
+				<field_description>Description of the Region Enabled field.</field_description>
+				<field_value>-</field_value>
+				<field_type>unsigned char</field_type>
+				<field_min>0</field_min>
+				<field_max>1</field_max>
+			</field>
+			<field>
+				<field_name>Planar Region</field_name>
+				<field_tag_name>region</field_tag_name>
+				<field_description>Description PlanarRegion.</field_description>
+				<field_value>-</field_value>
+				<field_type>unsigned char</field_type>
+				<field_min>0</field_min>
+				<field_max>255</field_max>
+			</field>
+			<field>
+				<field_name>Minimal Depth</field_name>
+				<field_tag_name>min_depth</field_tag_name>
+				<field_description>Description of Minimal Depth field.</field_description>
+				<field_value>-</field_value>
+				<field_type>float</field_type>
+				<field_min>min</field_min>
+				<field_max>max</field_max>
+			</field>
+			<field>
+				<field_name>Maximal Depth</field_name>
+				<field_tag_name>max_depth</field_tag_name>
+				<field_description>Description of Maximal Depth field.</field_description>
+				<field_value>-</field_value>
+				<field_type>float</field_type>
+				<field_min>min</field_min>
+				<field_max>max</field_max>
+			</field>
+		</tc>
+	</uplink_data_stream>
+</sw_icd>

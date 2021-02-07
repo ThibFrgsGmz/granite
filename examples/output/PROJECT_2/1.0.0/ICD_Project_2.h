@@ -15,21 +15,22 @@
         {
 #   endif
 
-typedef struct __StandbyTelecommand__ {
-	unsigned char			NameStandbyField_2;
-	char			NameStandbyField_2;
-	unsigned long			NameStandbyField_3;
-	unsigned long long			NameStandbyField_4;
-	signed char			NameStandbyField_5;
-} TypStandbyTelecommand;
+typedef struct __ToFRegion__ {
+	unsigned char			enable;
+	unsigned char			region;
+} TypToFRegion;
 
-typedef struct __FrameTelecommand__ {
-	char			NameFrameTcField_1;
-	char			NameFrameTcField_2;
-	char			NameFrameTcField_3;
-	char			NameFrameTcField_4;
-	char			NameFrameTcField_5;
-} TypFrameTelecommand;
+typedef struct __ToFRange__ {
+	float			min_depth;
+	float			max_depth;
+} TypToFRange;
+
+typedef struct __ToFConfiguration__ {
+	unsigned char			region_enabled;
+	unsigned char			region;
+	float			min_depth;
+	float			max_depth;
+} TypToFConfiguration;
 
 #   ifdef   __cplusplus
         }

@@ -1,11 +1,11 @@
 
 PROJECT_A: &project-a
-  PROJECT_NAME                      : PROJECT_A
+  PROJECT_NAME                      : PROJECT_1
   SW_VERSION                        : "0.0.0"
   OUTPUT_DIR                        : ".\\examples\\output"
   INPUT_DIR                         : ".\\examples\\input"
-  INPUT_XML_ICD_FILE                : SW_ICD.xml
-  NAME_OUTPUT_FILE                  : SW_ICD
+  INPUT_XML_ICD_FILE                : Project_1_ICD.xml
+  NAME_OUTPUT_FILE                  : ICD_Project_1
   # When using the yaml folded style, the indentation of each line will be ignored. 
   # A line break will be inserted at the end.
   OUTPUT_HEADER_PROLOG               : >-
@@ -18,9 +18,10 @@ PROJECT_A: &project-a
                             Copyright: 
                           */
 
-# PROJECT_B:
-#   PROJECT_NAME                      : PROJECT_B
-#   SW_VERSION                        : "0.0.0"
-#   TIME_INCREMENTAL_OUTPUT_DIR       : YES
-#   <<: *project-a
+PROJECT_B:
+  PROJECT_NAME                      : PROJECT_2
+  SW_VERSION                        : "1.0.0"
+  INPUT_XML_ICD_FILE                : Project_2_ICD.xml
+  NAME_OUTPUT_FILE                  : ICD_Project_2
+  <<: *project-a
 
