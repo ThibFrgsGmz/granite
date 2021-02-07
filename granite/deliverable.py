@@ -15,7 +15,7 @@ from granite.analysis.icd_xml import IcdXmlAnalysis
 
 class DeliverableGenerator():
     """Generate the package
-    
+
     """
 
     def __init__(
@@ -36,9 +36,9 @@ class DeliverableGenerator():
             not used yet
         """
 
-        # Initialize the instance configuration
-        self._config            = project_config
-        self._default_config    = _default_deliv_config
+        # Retrieve the project configuration
+        self._config = project_config
+
         # Get output folder tree
         self.output_folder_tree = self._get_output_path()
         # Make output directory
@@ -50,10 +50,15 @@ class DeliverableGenerator():
         # Retrieve the absolute path of the output directory
         output_dir = Path(self._config['OUTPUT_DIR'], self.output_folder_tree).resolve()
 
+        output_dir = '\\'.join([self._config['OUTPUT_DIR'], 
+                                self._config['PROJECT_NAME'], 
+                                self._config['SW_VERSION'],
+                                self._config['NAME_OUTPUT_FILE'] ])
+        
         # Make the output directory
         # os.makedirs(output_dir, exist_ok= True)
 
-        #Analyze the SW-ICD in XML format
+        # Analyze the SW-ICD in XML format
         IcdXmlAnalysis(input_icd, output_dir)
 
     def _get_output_path(self) -> str:

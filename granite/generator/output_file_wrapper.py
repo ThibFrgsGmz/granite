@@ -27,21 +27,12 @@ class OutputFileWrapper():
             print("No file location given. Using default '{}'."" Overwriting existing file.".format(DEFAULT_FILE_LOCATION) )
             self.filename = Path(DEFAULT_FILE_LOCATION).resolve()
             self.default_filename_on_use = True
-        elif isinstance(filename, Path):
-            self.filename = filename
-            self.default_filename_on_use = False
         else:
-            self.filename = Path(filename).resolve()
+            self.filename = Path(filename + format).resolve()
             self.default_filename_on_use = False
-
-        if self.filename.is_dir():
-            self.filename.mkdir(exist_ok=True)
-
-            print("Given path is directory without filename, using default filename.")
-            # self.filename.joinpath(DEFAULT_FILE_LOCATION, ".h")
-            self.filename = os.path.join(self.filename, DEFAULT_FILE_LOCATION + format)
 
         self.document = open(f"{self.filename}", "w+")
+        
 
     def __del__(self):
         self.document.close()

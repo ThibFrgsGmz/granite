@@ -41,10 +41,12 @@ class IcdXmlAnalysis():
             soup = bs.BeautifulSoup( fp, "lxml")
 
             # Create a Markdown file object for output
-            self.md = MarkDownFileWrapper(filename= ".\\examples\\output\\PROJECT_A\\0.0.0\\" + "README.md")
+            # self.md = MarkDownFileWrapper(filename= ".\\examples\\output\\PROJECT_A\\0.0.0\\" + "README.md")
+            self.md = MarkDownFileWrapper(output_dir)
 
             # Create a C header file object for output
-            self.h_file = CFileWrapper(filename = ".\\examples\\output\\PROJECT_A\\0.0.0\\" + "H_SOURCE.h")
+            self.h_file = CFileWrapper(filename = output_dir)
+            # self.h_file = CFileWrapper(filename = ".\\examples\\output\\PROJECT_A\\0.0.0\\" + "H_SOURCE.h")
 
             # Get the tag of all data streams with the uplink class
             uplink_data_stream = soup.find('uplink_data_stream')
