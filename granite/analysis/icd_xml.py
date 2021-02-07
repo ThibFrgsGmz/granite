@@ -22,8 +22,7 @@ class IcdXmlAnalysis():
     def __init__(
         self,
         xml_to_scrape: str,
-        icd_file_name_generated: str,
-        icd_source_c_generated: str
+        output_dir: str,
     ) -> None:
         """
         Method for initializing the object instance
@@ -77,7 +76,10 @@ class IcdXmlAnalysis():
         tc_fields = telecommand.find_all('field')
 
         # Write the header of the telecommad table
-        self.md.write_header_table(HEADER_TABLE_MD)
+        md_table = self.md.init_table()
+        
+        # self.md.write_header_table(HEADER_TABLE_MD)
+        self.md.write_header_table(md_table, HEADER_TABLE_MD)
 
         # Find the telecommand name
         structure_name_c = self._get_tag_content( telecommand, 'tc_tag_name')
@@ -86,18 +88,19 @@ class IcdXmlAnalysis():
         members = []
 
         # Parse all the field of the TC
-        self._parse_tc_fields(tc_fields, members)
+        self._parse_tc_fields(tc_fields, members, md_table)
 
         # Populate the C Structure into the C Header file
         self.h_file.populate_structure(structure_name_c, members)
 
         # Write the table content into the md file
-        self.md.write_table()
+        # self.md.write_table()
+        self.md.write_table(md_table)
         # Write the structure into the header file
         self.h_file.write_structure()
 
         # Write the source code into the md file
-        structure   =   self.h_file.get_c_structure()
+        structure = self.h_file.get_c_structure()
 
         # Write the C structure into the Markdown file
         self.md.write_source_code(tc_name, structure)
@@ -105,7 +108,8 @@ class IcdXmlAnalysis():
     def _parse_tc_fields(
         self, 
         tc_fields: bs.element.ResultSet,
-        members: list
+        members: list,
+        md_table
     ) -> None:
         """
         Method for parsing a telecommand
@@ -123,7 +127,7 @@ class IcdXmlAnalysis():
             self._parse_tc_field(field, members, dict_field)
 
             # Append the field dictionnary into a table for the Markdown output file
-            self.md.append_table(dict_field)
+            self.md.append_table(md_table, dict_field)
 
     def _parse_tc_field(
         self,
