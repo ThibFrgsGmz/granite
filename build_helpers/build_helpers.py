@@ -1,5 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 import codecs
+import sys
 import distutils.log
 import errno
 import os
