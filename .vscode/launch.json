@@ -3,12 +3,13 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [        
         {
-            "name": "Python : Fichier actuel",
+            "name": "GRANITE main",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            //"program": "${file}",
+            "program": "${workspaceFolder}\\granite\\main.py",
             "console": "integratedTerminal"
         }
     ]
