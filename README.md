@@ -12,6 +12,12 @@
 </p>
 
 <p align="center">
+<a href="https://sonarcloud.io/dashboard?id=ThibFrgsGmz_granite"><img alt="" src="https://sonarcloud.io/api/project_badges/measure?project=ThibFrgsGmz_granite&metric=sqale_rating"/></a>
+<a href="https://sonarcloud.io/dashboard?id=ThibFrgsGmz_granite"><img alt="" src="https://sonarcloud.io/api/project_badges/measure?project=ThibFrgsGmz_granite&metric=code_smells"/></a>
+<a href="https://sonarcloud.io/dashboard?id=ThibFrgsGmz_granite"><img alt="" src="https://sonarcloud.io/images/project_badges/sonarcloud-black.svg"></a>
+</p>
+
+<p align="center">
 <a href="https://deepsource.io/gh/ThibFrgsGmz/granite/?ref=repository-badge" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/ThibFrgsGmz/granite.svg/?label=active+issues&show_trend=true"/></a>
 <a href="https://deepsource.io/gh/ThibFrgsGmz/granite/?ref=repository-badge" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/ThibFrgsGmz/granite.svg/?label=resolved+issues&show_trend=true"/></a>
 <a href=""><img alt="GitHub" src="https://img.shields.io/github/license/ThibFrgsGmz/granite?logoColor=blue&style=flat-square"></a>
