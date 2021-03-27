@@ -9,6 +9,7 @@
 <a href="https://frontend.code-inspector.com/project/18606/dashboard"><img src="https://www.code-inspector.com/project/18606/score/svg" alt="CodeInspector" /></a>
 <a href="https://lgtm.com/projects/g/ThibFrgsGmz/granite/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/ThibFrgsGmz/granite.svg?logo=lgtm&logoWidth=18"/></a>
 <a href="https://lgtm.com/projects/g/ThibFrgsGmz/granite/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/ThibFrgsGmz/granite.svg?logo=lgtm&logoWidth=18"/></a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2FThibFrgsGmz%2Fgranite?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FThibFrgsGmz%2Fgranite.svg?type=shield"/></a>
 </p>
 
 <p align="center">
@@ -73,3 +74,6 @@ This avoids misunderstandings or software implementations that differ from the r
 *Section to be written*
 
 ---
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FThibFrgsGmz%2Fgranite.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FThibFrgsGmz%2Fgranite?ref=badge_large)
