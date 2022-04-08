@@ -17,9 +17,10 @@ from setuptools.command import build_py, develop, sdist  # type: ignore
 def find_version(*file_paths: str) -> str:
     with codecs.open(os.path.join(*file_paths), "r") as fp:
         version_file = fp.read()
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M)
-    if version_match:
-        return version_match.group(1)
+    if version_match := re.search(
+        r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M
+    ):
+        return version_match[1]
     raise RuntimeError("Unable to find version string.")
 
 
@@ -58,9 +59,8 @@ def find_(
                         scan_exclude=scan_exclude,
                     )
                     files.extend(ret)
-            else:
-                if matches(include_files, path) and not matches(excludes, path):
-                    files.append(path)
+            elif matches(include_files, path) and not matches(excludes, path):
+                files.append(path)
 
     return files
 
