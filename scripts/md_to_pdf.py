@@ -36,14 +36,12 @@ def _convert(markdown_file_name, css_file_name):
     file_name = os.path.splitext(markdown_file_name)[0]
     html_string = _html(markdown_file_name, css_file_name)
 
-    with open(
-        file_name + ".html", "w", encoding="utf-8", errors="xmlcharrefreplace"
-    ) as output_file:
+    with open(f'{file_name}.html', "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
         output_file.write(html_string)
 
     markdown_path = os.path.dirname(markdown_file_name)
     html = HTML(string=html_string, base_url=markdown_path)
-    html.write_pdf(file_name + ".pdf")
+    html.write_pdf(f'{file_name}.pdf')
 
 
 class EventHandler(FileSystemEventHandler):

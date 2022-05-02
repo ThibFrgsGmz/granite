@@ -24,7 +24,10 @@ class OutputFileWrapper():
         """
 
         if not filename:
-            print("No file location given. Using default '{}'."" Overwriting existing file.".format(DEFAULT_FILE_LOCATION) )
+            print(
+                f"No file location given. Using default '{DEFAULT_FILE_LOCATION}'. Overwriting existing file."
+            )
+
             self.filename = Path(DEFAULT_FILE_LOCATION).resolve()
             self.default_filename_on_use = True
         else:

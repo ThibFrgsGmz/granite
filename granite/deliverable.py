@@ -75,7 +75,7 @@ class DeliverableGenerator():
             output_folder_tree = '\\'.join([self._config['PROJECT_NAME'], self._config['SW_VERSION']])
         except TypeError as err:
             output_folder_tree = _default_deliv_config["OUTPUT_DIR"]
-            print("TypeError in {}: {}".format(__name__, err))
+            print(f"TypeError in {__name__}: {err}")
 
         # Return the output folder path
         return output_folder_tree
@@ -88,24 +88,24 @@ class DeliverableGenerator():
         try:
             # Retrieve the output directory path
             self.folder = self._config['OUTPUT_DIR']
-            
+
             # Add backslash to construct be able to add additional information to the path
             self.folder = self.folder + "\\"
-            
+
             # Add a custom directory depending on the information of the projet
             self.folder = self.folder + self.output_folder_tree
 
         except TypeError as err:
             # Retrieve the output directory path
             self.folder = self._default_config['OUTPUT_DIR']
-            
+
             # Add backslash to construct be able to add additional information to the path
             self.folder = self.folder + "\\"
-            
+
             # Add a custom directory depending on the information of the projet
             self.folder = self.folder + self.output_folder_tree
-            print("TypeError in {}: {}".format(__name__, err))
-            
+            print(f"TypeError in {__name__}: {err}")
+
         finally:
             # Make the output directory
             os.makedirs(self.folder, exist_ok= True)
